@@ -132,6 +132,46 @@ function briefingChatBot(){
     }
 }
 
+function calculateOvertime(){
+    let moneyPerHour = Number(prompt("Informe o salario recebido por hora:"));
+    let timePerMonth = Number(prompt("Informe as horas trabalhadas por mes:"));
+    let moneyInMonth = moneyPerHour * 40;
+    
+    if(timePerMonth > 40){
+        let extraHour = ((timePerMonth - 40) * moneyPerHour) + moneyInMonth
+        return alert(`O funcionario devera receber ${extraHour}`)
+    }
+    
+    return alert(`O funcionario devera receber ${moneyInMonth}`)
+
+}
+
+function calculator(){
+    let numberOne = Number(prompt("Informe o primeiro numero"))
+    let choice = Number(prompt("Escolha uma operação \n1- Divisão\n2- Mutiplicação\n3- Soma\n4- Subitração"))
+    let numberTwo = Number(prompt("Informe o segundo numero"))
+
+    switch(choice){
+        case 1: 
+            result = numberOne / numberTwo
+            return alert(`Calculo ${numberOne} / ${numberTwo} = ${result}`)
+        case 2: 
+            result = numberOne * numberTwo
+            return alert(`Calculo ${numberOne} * ${numberTwo} = ${result}`)
+        case 3: 
+            result = numberOne + numberTwo
+            return alert(`Calculo ${numberOne} + ${numberTwo} = ${result}`)
+        case 1: 
+            result = numberOne - numberTwo
+            return alert(`Calculo ${numberOne} - ${numberTwo} = ${result}`)
+    }
+
+
+}
+
+calculator()
+
+// calculateOvertime()
 
 // briefingChatBot()
 
